@@ -1,0 +1,15 @@
+{{#each @this}}
+    <div class='wein-entry'>
+        <div class='wein-entry__image-crop'>
+            <img class='wein-entry__image' src='{{ image }}' />
+        </div>
+        <h2 class='wein-entry__name'>{{ name }}</h2>
+        <p class='wein-entry__meta'>
+            {{ age }} – {{ year }} - {{ location }}
+        </p>
+        <div class='wein-entry__copy'>
+            {{{ marked copy }}}
+        </div>
+        </div>
+    </div>
+{{/each}}

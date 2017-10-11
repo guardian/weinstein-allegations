@@ -1,0 +1,29 @@
+.wein-entries {
+    
+}
+
+.wein-entry__image-crop {
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.wein-entry__name {
+    font-family: 'Guardian Egyptian Web';
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.wein-entry__meta {
+    color: darken($c-blue, 15%);
+    font-family: 'Guardian Text Sans Web';
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.wein-entry__copy {
+    color: $c-black;
+    font-family: 'Guardian Text Sans Web';
+    font-size: 16px;
+    line-height: 1.2;
+}
