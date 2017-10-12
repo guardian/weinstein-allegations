@@ -1,29 +1,55 @@
 .wein-entries {
-    
+    margin: 12px 0;
+}
+
+.wein-entry {
+    max-width: 620px;
+    margin-bottom: 12px;
+
+    @include mq(desktop) {
+        margin-left: 80px;
+    }
 }
 
 .wein-entry__image-crop {
     border-radius: 50%;
     display: inline-block;
     overflow: hidden;
+    width: 60px;
+    height: 60px;
+    background-color: $c-blue;
+
+    @include mq(desktop) {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.wein-entry__image {
+    width: 100%;
+    height: 100%;
 }
 
 .wein-entry__name {
     font-family: 'Guardian Egyptian Web';
     font-weight: normal;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .wein-entry__meta {
     color: darken($c-blue, 15%);
     font-family: 'Guardian Text Sans Web';
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.2;
+
+    @include mq(tablet) {
+        font-size: 16px;
+    }
 }
 
 .wein-entry__copy {
     color: $c-black;
-    font-family: 'Guardian Text Sans Web';
+    font-family: 'Guardian Text Egyptian Web';
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.4;
 }
