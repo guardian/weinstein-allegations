@@ -4,10 +4,11 @@
 
 .wein-entry {
     max-width: 620px;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
 
     @include mq(desktop) {
         margin-left: 80px;
+        margin-bottom: 36px;
     }
 }
 
@@ -51,5 +52,5 @@
     color: $c-black;
     font-family: 'Guardian Text Egyptian Web';
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
