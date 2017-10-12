@@ -1,15 +1,35 @@
 {{#each @this}}
     <div class='wein-entry'>
-        <div class='wein-entry__image-crop'>
-            <img class='wein-entry__image' src='{{ image }}' />
-        </div>
-        <h2 class='wein-entry__name'>{{ name }}</h2>
+        {{#if image}}
+            <div class='wein-entry__image-crop'>
+                <img class='wein-entry__image' src='{{ image }}' />
+            </div>
+        {{/if}}
+
+        <h2 class='wein-entry__quote {{#if quote}}has-quote{{/if}}'>
+            {{ quote }}
+            <span class='wein-entry__name'>{{ name }}</span>
+        </h2>
+
         <p class='wein-entry__meta'>
-            {{ age }} – {{ year }} - {{ location }}
+            {{#if age }}
+                Age <span>{{ age }}</span>
+            {{/if}}
+
+            {{#if year}}
+                Year: <span>{{ year }}</span>
+            {{/if}}
+
+            {{#if location}}
+                Location: <span>{{ location }}</span>
+            {{/if}}
         </p>
-        <div class='wein-entry__copy'>
-            {{{ marked copy }}}
-        </div>
+
+        {{#if copy}}
+            <div class='wein-entry__copy'>
+                {{ copy }} {{#if source}}Source: <a href='{{ sourceUrl }}'>{{ source }}</a> {{/if}}
+            </div>
+        {{/if}}
         </div>
     </div>
 {{/each}}

@@ -59,6 +59,7 @@
     font-weight: 200;
     font-size: 32px;
     line-height: 1.1;
+    margin: 0;
     margin-bottom: 6px;
 
     @include mq(desktop) {
@@ -82,6 +83,7 @@
 
 .wein-header__last-updated {
     font-family: 'Guardian Egyptian Web';
+    font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
     margin-top: 0;

@@ -1,14 +1,33 @@
 .wein-entries {
     margin: 12px 0;
+    overflow: auto;
+
+    @include mq(desktop) {
+        margin: 24px 0;
+    }
 }
 
 .wein-entry {
+    position: relative;
     max-width: 620px;
     margin-bottom: 24px;
 
-    @include mq(desktop) {
+    @include mq(tablet) {
         margin-left: 80px;
+    }
+
+    @include mq(desktop) {
         margin-bottom: 36px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: -80px;
+        bottom: 0px;
+        width: 60px;
+        background-color: $c-blue;
     }
 }
 
@@ -31,26 +50,61 @@
     height: 100%;
 }
 
-.wein-entry__name {
+.wein-entry__quote {
+    position: relative;
     font-family: 'Guardian Egyptian Web';
+    font-weight: 300;
     font-weight: normal;
     font-size: 20px;
+    line-height: 1.1;
+    margin: 0;
+    margin-bottom: 12px;
+    text-indent: 1.7em;
+    background-image: url('@@assetPath@@/assets/images/quote.svg');
+    background-position: left .1em;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+
+    @include mq(desktop) {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+    }
+}
+
+.wein-entry__name {
+    color: darken($c-blue, 15%);
+    display: block;
+    text-indent: 0;
 }
 
 .wein-entry__meta {
-    color: darken($c-blue, 15%);
+    color: $c-black;
     font-family: 'Guardian Text Sans Web';
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.2;
+    margin: 0;
 
-    @include mq(tablet) {
-        font-size: 16px;
+    span {
+        color: $c-dark-grey;
+        margin-right: 6px;
     }
 }
 
 .wein-entry__copy {
-    color: $c-black;
-    font-family: 'Guardian Text Egyptian Web';
+    color: darken($c-blue, 15%);
+    font-family: 'Guardian Text Sans Web';
     font-size: 16px;
-    line-height: 1.5;
+    margin-top: 2px;
+    line-height: 1.2;
+
+    a {
+        color: inherit;
+        border-bottom: 1px solid darken($c-blue, 15%);
+
+        &:hover {
+            border-bottom-color: $c-black;
+            text-decoration: none;
+        }
+    }
 }
