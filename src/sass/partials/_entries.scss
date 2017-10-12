@@ -10,14 +10,10 @@
 .wein-entry {
     position: relative;
     max-width: 620px;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
 
     @include mq(tablet) {
         margin-left: 80px;
-    }
-
-    @include mq(desktop) {
-        margin-bottom: 36px;
     }
 
     &:before {
@@ -101,6 +97,8 @@
     a {
         color: inherit;
         border-bottom: 1px solid darken($c-blue, 15%);
+        background-image: none !important;
+        
 
         &:hover {
             border-bottom-color: $c-black;
