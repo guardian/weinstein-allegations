@@ -55,16 +55,19 @@
     line-height: 1.1;
     margin: 0;
     margin-bottom: 12px;
-    text-indent: 1.7em;
-    background-image: url('@@assetPath@@/assets/images/quote.svg');
-    background-position: left .1em;
-    background-size: 1.5em;
-    background-repeat: no-repeat;
 
     @include mq(desktop) {
         font-size: 24px;
         line-height: 1.2;
         margin-bottom: 24px;
+    }
+
+    &.has-quote {
+        text-indent: 1.7em;
+        background-image: url('@@assetPath@@/assets/images/quote.svg');
+        background-position: left .1em;
+        background-size: 1.5em;
+        background-repeat: no-repeat;
     }
 }
 

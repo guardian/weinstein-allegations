@@ -1,7 +1,7 @@
 var $ = require('../vendor/jquery.js');
 
 var pageUrl = window.location.href;
-var title = 'Mapped: Trump and Russia';
+var title = 'The Weinstein allegations – a list';
 
 module.exports =  {
     init: function() {
@@ -9,9 +9,9 @@ module.exports =  {
     },
 
     setLinks: function() {
-        $('.mapped-share__button--twitter .mapped-share__link').attr('href', this.getTwitterLink());
-        $('.mapped-share__button--facebook .mapped-share__link').attr('href', this.getFacebookLink());
-        $('.mapped-share__button--email .mapped-share__link').attr('href', this.getEmailLink());
+        $('.wein-share__button--twitter .wein-share__link').attr('href', this.getTwitterLink());
+        $('.wein-share__button--facebook .wein-share__link').attr('href', this.getFacebookLink());
+        $('.wein-share__button--email .wein-share__link').attr('href', this.getEmailLink());
     },
 
     getTwitterLink: function(id) {
