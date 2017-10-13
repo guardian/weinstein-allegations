@@ -28,7 +28,12 @@ module.exports =  {
             }
 
             for (var i in data.Entries) {
-                 data.Entries[i].image = this.getImageUrl(data.Entries[i].image);
+                data.Entries[i].image = this.getImageUrl(data.Entries[i].image);
+
+                if (data.Entries[i].sourceUrl.substring(0, 4) !== 'http') {
+                    console.log(data.Entries[i].sourceUrl.substring(0, 4));
+                    data.Entries[i].sourceUrl = 'http://' + data.Entries[i].sourceUrl;
+                }
             }
 
             delete data.Main;
