@@ -31,7 +31,6 @@ module.exports =  {
                 data.Entries[i].image = this.getImageUrl(data.Entries[i].image);
 
                 if (data.Entries[i].sourceUrl.substring(0, 4) !== 'http') {
-                    console.log(data.Entries[i].sourceUrl.substring(0, 4));
                     data.Entries[i].sourceUrl = 'http://' + data.Entries[i].sourceUrl;
                 }
             }
@@ -55,7 +54,7 @@ module.exports =  {
     },
 
     addTimestamp: function() {
-        $('.wein-header__last-updated').text('Last Updated ' + lastUpdated.convert(data.lastUpdated));
+        $('.wein-header__last-updated').text('Last updated ' + lastUpdated.convert(data.lastUpdated));
     },
 
     addEntries: function() {

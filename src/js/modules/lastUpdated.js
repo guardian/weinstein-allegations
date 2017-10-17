@@ -6,9 +6,6 @@ module.exports =  {
             then = new Date(timestamp),
             delta = parseInt((now.getTime() - then) / 1000, 10);
 
-        console.log(new Date(timestamp));
-        console.log(new Date());
-
         if (delta < 0) {
             return false;
 
