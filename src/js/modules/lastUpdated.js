@@ -3,11 +3,8 @@ var $ = require('../vendor/jquery.js');
 module.exports =  {
     convert: function(timestamp) {
         var now = new Date(),
-            then = new Date(timestamp + '-04:00'),
+            then = new Date(timestamp),
             delta = parseInt((now.getTime() - then) / 1000, 10);
-
-            console.log(now);
-            console.log(then);
 
         if (delta < 0) {
             return false;
